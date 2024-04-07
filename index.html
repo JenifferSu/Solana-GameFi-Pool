@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('./img/background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 class="neon-text">{{displayheart}}</h1>
+        <div class="picture">
+            <img src="./img/middle.jpg" alt="middle.jpg">
+        </div>
+        <div class="top-right">
+            <button @click="roll" v-if="!showAnimation"  type="image" style="margin-right: 10px;">
+                    <img src="./img/1.png" alt="click me" class="pic">
+            </button>
+            <button v-if="!showAnimation"  type="image">
+                    <img src="./img/2.png" alt="click me" class="pic">
+            </button>
+        </div>
+
+        <!-- <button @click="roll" v-if="!showAnimation">Roll 2</button> -->
+        <video src="./img/autoplay.mp4" v-if="showAnimation" autoplay @ended="hideAnimation">
+            Your browser does not support the video tag.
+          </video>
+
+          <video :src="result.image" :alt="result.name" v-show="showAnimation2" autoplay @ended="hideAnimation2" muted>
+            Your browser does not support the video tag.
+          </video>
+        <!-- <video id="myvideo" v-if="showAnimation" autoplay @ended="hideAnimation">
+            <source class="active" src="./img/lingering.mp4" type="video/mp4">
+            <source src="./img/autoplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+
+
+        <!-- <div v-if="result" class="result">
+            <img :src="result.image" :alt="result.name">
+            <p class="neon-text">{{ result.name }} {{result.level}}</p>
+        </div> -->
+
+        <div class="bottom-right" v-if="showCoin">
+            <img src="./img/solcoin.jpg" alt="Coin Icon" class="coin-icon">
+            <span style="font-size: 24px; color: white; font-weight: bold;">100</span>
+            <img src="./img/coin.png" alt="Coin Icon" class="coin-icon">
+            <span style="font-size: 24px; color: white; font-weight: bold;">100</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

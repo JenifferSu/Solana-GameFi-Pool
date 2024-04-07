@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+.neon-text {
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    animation: neon 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 35px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
+    }
+}
+
+#app {
+    text-align: center;
+}
+
+.button {
+    padding: 0px 0px;
+    margin-bottom: 0px;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make the button cover the entire container */
+    height: auto;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.result img {
+    max-width: 200px;
+    height: auto;
+}
+
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.picture {
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+}
+
+.picture img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Adds shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adds transition effect */
+}
+
+.picture:hover img {
+    transform: scale(1.05); /* Scales the image on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.12); /* Adds larger shadow on hover */
+}
+
+.top-right {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.coin-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.pic{
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    background-size: cover;
+    object-fit:cover;
+    padding: 0;
+}
