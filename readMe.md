@@ -10,4 +10,4 @@ Welcome to Poolside Emporium, a Solana-based GameFi project that brings the exci
 Check out Poolside Emporium Figma here: https://www.figma.com/proto/uM5UniSrelh0GUzZcynjxZ/Cincai?node-id=4-541&t=e1yFsjZ4NeGYle0h-1&scaling=min-zoom&page-id=0%3A1
 
 ## Pitching
-Find out our Pitching slide in the file "Poolside Emporium Pitching Slides"
+Find out our Pitching slide in the file "Poolside Emporium Pitching Slides.zip"
